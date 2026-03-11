@@ -13,22 +13,23 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.123">
+        tools:ignore="VisualLintBounds">
 
         <ImageView
             android:id="@+id/myImage"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:contentDescription="@string/app_logo"
+            android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
+            android:alpha="0.8"
+            android:background="#AB7575"
+            android:contentDescription="@string/app_logo"
+            android:scaleType="fitStart"
             android:src="@drawable/logo"
-            android:alpha="0.8"/>
+            tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
@@ -36,11 +37,11 @@
         android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="48dp"
         android:background="@drawable/button_rounded"
+        android:fontFamily="sans-serif-medium"
         android:letterSpacing="0.1"
         android:text="@string/begin_session"
-        android:fontFamily="sans-serif-medium"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:backgroundTint="@null"
@@ -51,31 +52,33 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="468dp"
-        android:text="Maximize results."
+        android:layout_marginBottom="84dp"
         android:fontFamily="sans-serif-medium"
+        android:text="Maximize results."
         android:textColor="#E91E63"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintHorizontal_bias="0.648"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.415" />
+        tools:ignore="HardcodedText,TextContrastCheck" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="420dp"
-        android:text="Minimize distractions,"
+        android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-medium"
+        android:text="Minimize distractions,"
         android:textColor="#009688"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.415" />
+        tools:ignore="HardcodedText,TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

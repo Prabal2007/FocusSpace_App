@@ -8,42 +8,46 @@
     android:background="@drawable/welcome_gradient">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_width="357dp"
+        android:layout_height="433dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.298">
+        app:layout_constraintVertical_bias="0.236">
 
         <TextView
             android:id="@+id/emojiTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="35dp"
             android:text="🎉"
-            android:textSize="120sp" />
+            android:textSize="120sp"
+            tools:ignore="HardcodedText,TextContrastCheck" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
             android:text="Well Done!"
             android:textColor="#2E7D32"
             android:textSize="45sp"
             android:textStyle="bold"
-            android:layout_marginBottom="20dp" />
+            tools:ignore="HardcodedText,TextContrastCheck" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="147dp"
             android:layout_marginTop="8dp"
+            android:padding="14dp"
             android:text="You completed a 1-minute session."
             android:textAlignment="center"
             android:textColor="#2E7D32"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            tools:ignore="HardcodedText,TextContrastCheck,VisualLintBounds" />
 
     </LinearLayout>
 
@@ -58,7 +62,9 @@
         app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="HardcodedText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

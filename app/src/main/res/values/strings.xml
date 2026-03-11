@@ -7,4 +7,6 @@
     <string name="give_up">GIVE UP</string>
     <string name="_25_00">25:00</string>
     <string name="stay_focused">STAY FOCUSED</string>
+    <string name="start">START</string>
+    <string name="you_have_to_concentrate_and_stay_focused">You have to concentrate and stay focused</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.karamat // Ensure this matches your package name
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -14,10 +15,12 @@ class TimerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_timer)
 
         val timerText = findViewById<TextView>(R.id.tvTimer)
+        val btnStart = findViewById<Button>(R.id.btnStart)
         val btnCancel = findViewById<Button>(R.id.btnCancel)
 
         // 1. Setup the 1-Minute Timer (60,000 ms)
         val timer = object : CountDownTimer(60000, 1000) {
+            @SuppressLint("DefaultLocale")
             override fun onTick(millisUntilFinished: Long) {
                 val secondsRemaining = millisUntilFinished / 1000
 
@@ -42,8 +45,10 @@ class TimerActivity : AppCompatActivity() {
             }
         }
 
-        // Start the timer automatically
-        timer.start()
+        // Start the timer
+        btnStart.setOnClickListener {
+            timer.start()
+        }
 
         // Cancel button logic
         btnCancel.setOnClickListener {
